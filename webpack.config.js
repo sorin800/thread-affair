@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebackPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const {
@@ -59,7 +60,16 @@ module.exports = (_, argv) => {
             inject: 'body',
             chunks: ['app'],
             filename: fileName,
+            favicon: 'favicon.ico',
           });
+        }),
+        new CopyWebackPlugin({
+          patterns: [
+            {
+              from: 'favicon.ico',
+              to: 'favicon.ico',
+            },
+          ],
         }),
       ],
     },
