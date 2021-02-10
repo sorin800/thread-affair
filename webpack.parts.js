@@ -3,17 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 exports.cleanBuildDirectory = () => {
   return {
     plugins: [new CleanWebpackPlugin()],
-  };
-};
-
-exports.loadFavicon = (options = {}) => {
-  return {
-    plugins: [new FaviconsWebpackPlugin(options)],
   };
 };
 

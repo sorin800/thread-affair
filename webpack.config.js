@@ -14,7 +14,6 @@ const {
   loadBabel,
   minifyJavaScript,
   lintJavaScript,
-  loadFavicon,
 } = require('./webpack.parts');
 
 const DEV = 'development';
@@ -76,9 +75,6 @@ module.exports = (_, argv) => {
       options: {
         presets: ['@babel/preset-env'],
       },
-    }),
-    loadFavicon({
-      inject: true,
     }),
   );
 
