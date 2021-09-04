@@ -11,13 +11,11 @@
 </head>
 
 <body>
-  <div>
-    <!-- simple HTML templating also works, wrap it inside an element to fool the formatter-->
-    <%= require('html-loader!./html/nav.html')%>
-  </div>
+
+  <% include html/nav.html %>
   <h1>Pixellab static website builder</h1>
-  <!-- images are weird, but it's worth it ;) -->
-  <img src="<%= require('./logo.png').default %>">
+  <img src="logo.png">
+
 </body>
 
 </html>

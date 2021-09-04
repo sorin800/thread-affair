@@ -15,6 +15,7 @@ const {
   loadBabel,
   minifyJavaScript,
   lintJavaScript,
+  loadHtml,
 } = require('./webpack.parts');
 
 const DEV = 'development';
@@ -56,7 +57,7 @@ module.exports = (_, argv) => {
         // two words!!! it's fileName, camelcased
         ...htmlFileNames.map((fileName) => {
           return new HtmlWebpackPlugin({
-            template: path.join(PATHS.src, fileName),
+            template: `${path.join(PATHS.src, fileName)}`,
             inject: 'body',
             chunks: ['app'],
             filename: fileName,
@@ -85,6 +86,9 @@ module.exports = (_, argv) => {
       options: {
         presets: ['@babel/preset-env'],
       },
+    }),
+    loadHtml({
+      exclude: /(node_modules)/,
     }),
   );
 

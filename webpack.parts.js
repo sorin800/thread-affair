@@ -119,6 +119,22 @@ exports.loadBabel = ({ include, exclude, options } = {}) => {
   };
 };
 
+exports.loadHtml = ({ include, exclude, options } = {}) => {
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.html$/,
+          use: ['html-loader', 'ejs-html-loader'],
+          exclude,
+          include,
+          options,
+        },
+      ],
+    },
+  };
+};
+
 exports.minifyJavaScript = () => {
   return {
     optimization: {
