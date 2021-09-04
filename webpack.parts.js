@@ -14,13 +14,12 @@ exports.devServer = ({ host, port } = {}) => {
   return {
     devServer: {
       historyApiFallback: true,
-      stats: 'errors-only',
       host,
       port,
-      overlay: {
-        errors: true,
-        warnings: true,
+      client: {
+        overlay: true,
       },
+      hot: false,
     },
   };
 };
