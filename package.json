@@ -1,6 +1,6 @@
 {
   "name": "pixellab-webpack-builder",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Create a super simple static site with modern JS and Sass or CSS, without a backend",
   "scripts": {
     "start": "webpack serve --mode development",
