@@ -1,4 +1,13 @@
-// @import '~bootstrap/scss/bootstrap';
+// tilda este un alias pentru node_modules
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+@import './../../node_modules/bootstrap/scss/bootstrap-reboot';
+@import './../../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+@import './../../node_modules/bootstrap/scss/bootstrap-grid.scss';
 
 // fonts
 @import './fonts';
