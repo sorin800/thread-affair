@@ -15,6 +15,12 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 // fonts
 @import './fonts';
 
+// variables
+@import './variables';
+
+// start project
+@import './shared/index';
+
 body {
   font-family: 'Roboto', 'sans-serif';
 }
