@@ -19,6 +19,17 @@
         color: $brand-primary;
         text-align: center;
         text-transform: uppercase;
+
+        @include media-breakpoint-up('lg') {
+          font-size: 30px;
+          color: $black;
+          font-weight: 500;
+
+          span {
+            font-weight: 300;
+            text-transform: initial;
+          }
+        }
       }
     }
   }
