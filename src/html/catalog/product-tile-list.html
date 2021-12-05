@@ -1,7 +1,18 @@
 <div class="product-tile-list d-block d-lg-flex justify-content-lg-between">
-  <% include product-tile.html %>
+  <div class="glide">
+    <div
+      class="glide__track"
+      data-glide-el="track"
+    >
+      <ul class="glide__slides">
+        <% include product-tile.html %>
 
-  <% include product-tile.html %>
+        <% include product-tile.html %>
 
-  <% include product-tile.html %>
+        <% include product-tile.html %>
+
+      </ul>
+    </div>
+  </div>
+
 </div>
